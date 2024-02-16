@@ -29,6 +29,14 @@
 - Multitenancy: Sharing underlying hardware between virtual machines.
 - Caas: Comput as a Service.
 - Vertical Scaling
+- ELB: Elastic Load Balancing. The AWS service that automatically distributes incoming application traffic across multiple resources.
+- Monolithic application: all components are in a same application, tightly coupled components. One component fails, others will fail.
+- Microservices: all components are individual, loosely coupled. One component fails, others will keep running.
+- Amazon SNS: Amazon Simple Notification Service, a publish/subscribe service. Using Amazon SNS topic, a publisher publishes messages to subscribers. Subscribers can be web servers, email address, AWS Lambda functions, or several other options.
+- Amazon SQS: Amazon Simple Queue Service, a message queuing service. Using Amazon SQS, you can send, store, and recieve messages between software components, without losing messsages or requiring other services to be available. An application sends messages into a queue. A user or service retrieves a message from the queue, processes it, and the deletes it from the queue.
+- Serverless computing: your code runs on servers, but you don't need to provision or manage these servers. The flexibility to scale serverless applications automatically. You can not see or access the underlying infrastructure. Running less than 15 minutes applications. 
+- AWS Lambda: a serverless computing service. Pay only for the compute time that you consume.
+- Containers: Provide you with a statndard way to package your application's code and dependencies into a single object. Can be used for processes and workflows in which there are essentail requirements for security, reliability, and scalability.
 
 ### 5 type of Amazon EC2 Instance
 - General purpose instance
@@ -75,3 +83,27 @@
   - use unused EC2 computing capacity and saving at up to 90% off of On-Demand prices.
 - Dedicated Hosts / 专用主机
   - physical servers with EC2 instance capacity that is fully dedicated to your use.
+
+### Scalabiltiy
+- Scalability involves beginning with only the resources you need and designing your architecture to automatically respond to changing demand by scaling out or in. / 可扩展性是指仅从需要的资源开始，并设计架构以便自动扩展和缩减，从而相应不断变化的需求。
+
+### 2 approaches in Amazon EC2 Auto Scaling
+- Dynamic scaling responds to changing demand. 动态扩展
+- Predictive scaling automatically schedules the right number of Amazon EC2 instances based on predicted demand. 预测性扩展
+
+### Amazon EC2 Auto Scaling config
+- Set minimum capacity. 
+  - minimum capacity is the number of Amazon EC2 instances that launch immediately after you have created the Auto Scaling Group.
+- Set desired capacity.
+- Set maximum capacity. max instance you will have.
+
+### How AWS Lambda works
+- Upload code to Lambda
+- Set code to trigger from an event source.
+- Code runs only when triggered.
+- Pay only for the compute time you use.
+
+### 3 types of Service for Container
+- Amazon Elastic Container Service (Amazon ECS): a highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS. Supports Docker.
+- Amazon Elastic Kubernetes Service (Amazon EKS): a fully managed service that you can use to run Kubernetes on AWS.
+- AWS Fragage: a serverless compute engine for containers. Works with both Amazon ECS and Amazon EKS.
