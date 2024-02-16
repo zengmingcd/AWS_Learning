@@ -22,6 +22,8 @@
 - Increase speed and agility. / 相比数据中心需要花费更多时间采购、安装、调试等工作，云计算更快分配资源。
 - Go global in minutes. / 全球化部署，降低用户访问延迟。
 
+---
+
 ## Module 2 Computing in the Cloud
 
 ### Terms
@@ -106,4 +108,29 @@
 ### 3 types of Service for Container
 - Amazon Elastic Container Service (Amazon ECS): a highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS. Supports Docker.
 - Amazon Elastic Kubernetes Service (Amazon EKS): a fully managed service that you can use to run Kubernetes on AWS.
-- AWS Fragage: a serverless compute engine for containers. Works with both Amazon ECS and Amazon EKS.
+- AWS Fragate: a serverless compute engine for containers. Works with both Amazon ECS and Amazon EKS.
+
+### 3 Compute services
+- Amazon EC2
+  - Host traditiondal applications / 托管传统应用程序
+  - Full access to the OS / 对操作系统的完全访问权限
+- AWS Lambda
+  - Host short running functions / 托管短时间运行函数
+  - Service-oriented applications / 面向服务的应用程序
+  - Event driven applications / 事件驱动型应用程序
+  - No provisioning or managing servers / 无需预置或管理服务器
+- Container(Amazon EC2 or AWS fragate) + Amazon ECS or Amazon EKS
+  - Run Docker container-based workloads on AWS
+
+---
+
+# Module 3 Global Infrastructure and Reliability
+
+### Terms
+- Availability Zone: a single data center or a group of data centers within a Region. Locate tens of miles apart from each other.
+
+### 4 Business Factor when selecting a region
+- Compliance with data governance and legal requirements. / 遵守数据监管和法律要求
+- Proximity to your customers. Help you to get content to them faster. / 靠近客户
+- Available services within a region. / 区域内的可用服务
+- Pricing. / 定价
