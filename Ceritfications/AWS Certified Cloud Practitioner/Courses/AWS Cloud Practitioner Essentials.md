@@ -127,10 +127,35 @@
 # Module 3 Global Infrastructure and Reliability
 
 ### Terms
-- Availability Zone: a single data center or a group of data centers within a Region. Locate tens of miles apart from each other.
+- Availability Zone: a single data center or a group of data centers within a Region. Locate tens of miles apart from each other. A region consists of three of more Availability Zones.
+- Edge location: a site that Amazon CloudFront uses to store cached copies of your content closer to your customers for faster delivery. 
+- Amazon Outposts: a service that enables you to run infrastructure in a hybird cloud approach.
 
 ### 4 Business Factor when selecting a region
 - Compliance with data governance and legal requirements. / 遵守数据监管和法律要求
 - Proximity to your customers. Help you to get content to them faster. / 靠近客户
 - Available services within a region. / 区域内的可用服务
 - Pricing. / 定价
+
+### 3 Key Points of Region
+- Regions are geographically isolated areas. / 区域是在地理位置上隔离的区域。
+- Regions contain availability Zones. / 区域包含可用区。
+- Edge locations run Amazon CloudFront. / Amazon CloudFront 在边缘站点运行。
+
+### 3 Ways to interact with AWS services
+- AWS Management Console: a web-based interface for accessing and managing AWS services.
+- AWS Command Line Interface (CLI): Control multiple AWS services directly from the command line within one tool. 
+- Software Development Kits (SDK): Use AWS services through an API designed for your programming language or platform.
+
+
+### 2 Ways to provision AWS resources automaticly
+- AWS Elastic Beanstalk: User provide code and configuration settings, and Elastic Beanstalk deploys the resources necessary to perform the following tasks:
+  - Adjust capacity
+  - Load balancing
+  - Automatic scaling
+  - Application health monitoring
+- AWS CloudFormation: Treat your infrastructure as code.
+
+---
+
+# Module 4 Networking
