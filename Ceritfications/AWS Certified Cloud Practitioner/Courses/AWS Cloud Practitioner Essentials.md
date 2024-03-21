@@ -27,18 +27,18 @@
 ## Module 2 Computing in the Cloud
 
 ### Terms
-- Amazon EC2: Amazon Elastic Comput Cloud.
+- Amazon EC2: Amazon Elastic Compute Cloud.
 - Multitenancy: Sharing underlying hardware between virtual machines.
-- Caas: Comput as a Service.
+- Caas: Compute as a Service.
 - Vertical Scaling
 - ELB: Elastic Load Balancing. The AWS service that automatically distributes incoming application traffic across multiple resources.
 - Monolithic application: all components are in a same application, tightly coupled components. One component fails, others will fail.
 - Microservices: all components are individual, loosely coupled. One component fails, others will keep running.
 - Amazon SNS: Amazon Simple Notification Service, a publish/subscribe service. Using Amazon SNS topic, a publisher publishes messages to subscribers. Subscribers can be web servers, email address, AWS Lambda functions, or several other options.
-- Amazon SQS: Amazon Simple Queue Service, a message queuing service. Using Amazon SQS, you can send, store, and recieve messages between software components, without losing messsages or requiring other services to be available. An application sends messages into a queue. A user or service retrieves a message from the queue, processes it, and the deletes it from the queue.
+- Amazon SQS: Amazon Simple Queue Service, a message queuing service. Using Amazon SQS, you can send, store, and receive messages between software components, without losing messages or requiring other services to be available. An application sends messages into a queue. A user or service retrieves a message from the queue, processes it, and the deletes it from the queue.
 - Serverless computing: your code runs on servers, but you don't need to provision or manage these servers. The flexibility to scale serverless applications automatically. You can not see or access the underlying infrastructure. Running less than 15 minutes applications. 
 - AWS Lambda: a serverless computing service. Pay only for the compute time that you consume.
-- Containers: Provide you with a statndard way to package your application's code and dependencies into a single object. Can be used for processes and workflows in which there are essentail requirements for security, reliability, and scalability.
+- Containers: Provide you with a standard way to package your application's code and dependencies into a single object. Can be used for processes and workflows in which there are essential requirements for security, reliability, and scalability.
 
 ### 5 type of Amazon EC2 Instance
 - General purpose instance
@@ -46,32 +46,32 @@
   - Use for: application servers, gaming servers, backend servers for enterprise applications, small and medium database.
 - Compute optimized instance
   - ideal for compute-bound applications that benefit from high-performance processors.
-  - Use for: high-performance web servers, compute-intensive applications servers, dedicated gaming servers, batch processing workloads that require processing many trasactions in a sigle group.
+  - Use for: high-performance web servers, compute-intensive applications servers, dedicated gaming servers, batch processing workloads that require processing many transactions in a single group.
 - Memory optimized instance
   - ideal for process large datasets in memory.
   - Use for: requires large amounts of data to be preload before running an application.
 - Accelerated computing instance
-  - Use hardware accelerators, or coprocessors, to perform some functions more efficiently than is possible in sofware running on CPUs.
+  - Use hardware accelerators, or coprocessors, to perform some functions more efficiently than is possible in software running on CPUs.
   - Use for: floating-point number calculations, graphics processing and data patten matching. Such as graphics applications, game streaming, application streaming.
 - Storage optimized instance
   - designed for require high, sequential read and write access to large datasets on local storage. Tens of thousands of low-latency, random IOPS (input/output operations per second) to applications.
-  - Use for distributed file systems, data warehousing applications, high-frequency online trasaction processing (OLTP) systems.
+  - Use for distributed file systems, data warehousing applications, high-frequency online transaction processing (OLTP) systems.
 
 ### 5 pricing options of EC2
 - On-Demand
-  - ideal for shor-term, irregular workloads that cannot be interrupted.
+  - ideal for short-term, irregular workloads that cannot be interrupted.
   - No upfront costs or minimum contracts apply.
-  - The instances run continously until you stop them, and you pay for only the compute time you use.
-  - Not recommand for last a year or longer.
+  - The instances run continuously until you stop them, and you pay for only the compute time you use.
+  - Not recommend for last a year or longer.
 - Reserved Instances
-  - Billing discount appplied to the use of On-Demand Instance. 2 types: 
+  - Billing discount applied to the use of On-Demand Instance. 2 types: 
     - Standard Reserved Instance
       - good fit if you know the type and size you need:
         - Instance type and size.
         - Platform description (operating system)
         - Tenancy: Default tenancy or dedicated tenancy
     - Convertible Reserved Instance
-      - good if you need to run EC2 instances in defferent Availability Zones ro different instance types.
+      - good if you need to run EC2 instances in different Availability Zones ro different instance types.
   - At the end of a reserved term, you can continue using the EC2 instance without interruption. You are charged On-Demand rates until you do one of the following:
     - Terminate the instance.
     - Purchase a new reserved instance that matches the instance attributes.
@@ -79,14 +79,14 @@
   - make an hourly spend commitment to an instance family and region for a 1-year or 3-year term.
   - saving up to 72%
   - fit for flexibility usage
-  - no need to specify up front resouces
+  - no need to specify up front resources
 - Spot Instances
   - flexible start and end times. or can withstand interruptions.
   - use unused EC2 computing capacity and saving at up to 90% off of On-Demand prices.
 - Dedicated Hosts / 专用主机
   - physical servers with EC2 instance capacity that is fully dedicated to your use.
 
-### Scalabiltiy
+### Scalability
 - Scalability involves beginning with only the resources you need and designing your architecture to automatically respond to changing demand by scaling out or in. / 可扩展性是指仅从需要的资源开始，并设计架构以便自动扩展和缩减，从而相应不断变化的需求。
 
 ### 2 approaches in Amazon EC2 Auto Scaling
@@ -112,7 +112,7 @@
 
 ### 3 Compute services
 - Amazon EC2
-  - Host traditiondal applications / 托管传统应用程序
+  - Host traditional applications / 托管传统应用程序
   - Full access to the OS / 对操作系统的完全访问权限
 - AWS Lambda
   - Host short running functions / 托管短时间运行函数
@@ -129,7 +129,7 @@
 ### Terms
 - Availability Zone: a single data center or a group of data centers within a Region. Locate tens of miles apart from each other. A region consists of three of more Availability Zones.
 - Edge location: a site that Amazon CloudFront uses to store cached copies of your content closer to your customers for faster delivery. 
-- Amazon Outposts: a service that enables you to run infrastructure in a hybird cloud approach.
+- Amazon Outposts: a service that enables you to run infrastructure in a hybrid cloud approach.
 
 ### 4 Business Factor when selecting a region
 - Compliance with data governance and legal requirements. / 遵守数据监管和法律要求
@@ -148,7 +148,7 @@
 - Software Development Kits (SDK): Use AWS services through an API designed for your programming language or platform.
 
 
-### 2 Ways to provision AWS resources automaticly
+### 2 Ways to provision AWS resources automatically
 - AWS Elastic Beanstalk: User provide code and configuration settings, and Elastic Beanstalk deploys the resources necessary to perform the following tasks:
   - Adjust capacity
   - Load balancing
@@ -159,3 +159,18 @@
 ---
 
 # Module 4 Networking
+
+### Terms
+- Amazon Virtual Private Cloud (VPC): Provision an isolated section of the AWS Cloud. In this isolated section, you can launch resources in a virtual network that you define. You can organize your resources into subnets.
+- Subnet: A section of a VPC can contain resources.
+
+### 3 types to access VPC
+- Internet gateway (IGW): Allow public traffic from the internet to access VPC.
+  - A connection between a VPC and Internet.
+  - Without an internet gateway, no one can access the resources within the VPC.
+- Virtual private gateway: A component that allows protected internet traffic to enter into the VPC. Establish a virtual private network (VPN) connection between VPC and private network. A Virtual private gateway allows traffic into the VPC only if it is coming from an approved network.
+  - Using Virtual Private Network (VPN) to protect the internet traffic.
+  - Traffic jams are possible because of using the same road as other customers.
+- AWS Direct Connect: a service, establish a dedicated private connection between data center and VPC.
+  - reduce network costs
+  - increase the amount of bandwidth
